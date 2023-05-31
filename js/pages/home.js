@@ -8,7 +8,17 @@ import { socialMetrics } from '../components/socialMetrics.js';
 
 /* SOCIAL METRICS: start */
 
-socialMetrics('#metrics_block', socialMetricsData);
+const res = socialMetrics('#metrics_block', socialMetricsData);
+// res = [isError, msg];
+
+const isError = res[0];
+const msg = res[1];
+
+if (isError) {
+    console.error(msg);
+} else {
+    console.log(msg);
+}
 
 /* SOCIAL METRICS: end */
 

@@ -1,15 +1,17 @@
+// return -> error-first
+
 function socialMetrics(selector, data) {
     if (typeof selector !== 'string' || selector === '') {
-        return false;
+        return [true, 'ERROR: selector has to be non-empty string'];
     }
 
     const DOM = document.querySelector(selector);
     if (DOM === null) {
-        return false;
+        return [true, 'ERROR: could not find DOM element'];
     }
 
     if (!Array.isArray(data) || data.length === 0) {
-        return false;
+        return [true, 'ERROR: data has to be non-empty array'];
     }
 
     let HTML = '';
@@ -23,7 +25,8 @@ function socialMetrics(selector, data) {
 
     DOM.classList.add('social-metrics');
     DOM.innerHTML = HTML;
-    return true;
+
+    return [false, 'OK'];
 }
 
 export { socialMetrics };
