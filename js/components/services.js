@@ -51,8 +51,8 @@ function services(selector, data) {
             !isNonEmptyString(service.icon) ||
             !isNonEmptyString(service.title) ||
             !isNonEmptyString(service.desc) ||
-            !containsAllowedSymbols(service.title) ||
-            !containsAllowedSymbols(service.desc, '.!?;:') ||
+            !containsAllowedSymbols(service.title, '&;') ||
+            !containsAllowedSymbols(service.desc, ',.!?;:') ||
             !etLinesIconsData.includes(service.icon)
         ) {
             continue;
