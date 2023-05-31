@@ -14,8 +14,14 @@ function socialMetrics(selector, data) {
 
     let HTML = '';
 
-    // logika...
+    for (const item of data) {
+        HTML += `<li class="metric">
+                    <div class="number">${item.number}</div>
+                    <div class="label">${item.label}</div>
+                </li>`;
+    }
 
+    DOM.classList.add('social-metrics');
     DOM.innerHTML = HTML;
     return true;
 }
