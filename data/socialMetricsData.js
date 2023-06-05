@@ -1,18 +1,22 @@
 const socialMetricsData = [
     {
-        number: '523k',
+        number: 523,
+        symbol: 'k',
         label: 'Audience',
     },
     {
-        number: '26m',
+        number: 26,
+        symbol: 'm',
         label: 'Views',
     },
     {
-        number: '12k',
+        number: 12,
+        symbol: 'k',
         label: 'Comments',
     },
     {
-        number: '314k',
+        number: 314,
+        symbol: 'k',
         label: 'Likes',
     },
 ];
